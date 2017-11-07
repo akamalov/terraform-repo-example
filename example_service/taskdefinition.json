@@ -1,0 +1,17 @@
+[
+  {
+    "name": "${image_name}",
+    "image": "my-company/${image_name}:${image_tag}",
+    "memory": 512,
+    "cpu": 512,
+    "portMappings": [
+      {
+        "containerPort": 8080
+      }
+    ],
+    "environment" : [
+      { "name": "build_version", "value": "${build_version}" },
+	    { "name": "ENVIRONMENT", "value": "${environment}" }
+    ]
+  }
+]
